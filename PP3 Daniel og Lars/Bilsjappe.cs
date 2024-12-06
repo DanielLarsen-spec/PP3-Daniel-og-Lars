@@ -97,7 +97,19 @@ namespace PP_03_bilsjappe_Lars_og_Daniel
 
             public void BuyCar()
             {
-                Console.WriteLine("Skriv inn reg.nr på bilen du ønsker å kjøpe.");
+            Console.WriteLine("Buy a car here by writing the reg nr!");    
+            
+            string userinput = Console.ReadLine();
+
+                foreach (Car car in cars)
+            {
+                if (userinput == car.RegNo)
+                {
+                    Console.WriteLine("You bought this car");
+                    Console.WriteLine($"year: {car.Year} \n brand: {car.Brand}\n model: {car.Model} \n Km.stand: {car.KmLength} \n Reg.nr: {car.RegNo} \n\n");
+                }
+            }
+            
                 
 
 
